@@ -1,22 +1,28 @@
-# Import OSM Borders into PostGIS
+# !!! OBSOLETE !!!
+
+This repo has been archived. Use [openmaptiles-tools/imports/osmborder](https://github.com/openmaptiles/openmaptiles-tools/tree/master/imports/osmborder) instead.
+
+-----
+
+### Import OSM Borders into PostGIS
 [![Docker Automated build](https://img.shields.io/docker/automated/openmaptiles/import-osmborder.svg)](https://hub.docker.com/r/openmaptiles/import-osmborder/) [![](https://images.microbadger.com/badges/image/openmaptiles/import-osmborder.svg)](https://microbadger.com/images/openmaptiles/import-osmborder "Get your own image badge on microbadger.com")
 
 This Docker image will import an OSM PBF file using [imposm3](https://github.com/omniscale/imposm3) and
 a [custom mapping configuration](https://imposm.org/docs/imposm3/latest/mapping.html).
 
-## Usage
+#### Usage
 
 The process is split into tow steps
 
 1. **generate-osmborder**: Generate a CSV file containing the geometries
 2. **import-osmborder**: Docker image containing the CSV file for easy import into PostGIS
 
-### Download PBF File
+##### Download PBF File
 
 Use [Geofabrik](http://download.geofabrik.de/index.html) and choose the extract
 of your country or region. Download it and put it into the directory.
 
-### Generate
+##### Generate
 
 The **generate-osmborder** Docker container will take the first PBF file and generate the CSV file.
 Mount your PBFs into the `/import` folder
@@ -30,7 +36,7 @@ docker run --rm \
 
 Now upload the generated CSV to GitHub releases and update the reference link inside **import-osmborder**.
 
-### Import
+##### Import
 
 The **import-osmborder** will import the embedded CSV into the database.
 
