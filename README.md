@@ -1,6 +1,6 @@
 # !!! OBSOLETE !!!
 
-This repo has been archived. Use [openmaptiles-tools/imports/osmborder](https://github.com/openmaptiles/openmaptiles-tools/tree/master/imports/osmborder) instead.
+This repo has been archived. Use [openmaptiles-tools/docker/import-osmborder](https://github.com/openmaptiles/openmaptiles-tools/tree/master/docker/import-osmborder) instead.
 
 -----
 
